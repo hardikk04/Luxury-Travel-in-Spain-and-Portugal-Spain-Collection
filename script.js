@@ -137,7 +137,7 @@ t1.to(".video-dets>h3,.video-dets>p", {
     start: "top 5%",
     end: "top -5%",
     scrub: 1,
-    markers: true,
+    // markers: true,
   },
 });
 
