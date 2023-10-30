@@ -116,6 +116,31 @@ t1.to(".middle-right", {
   },
 });
 
+t1.to(".page3,.page2", {
+  backgroundColor: "#fff",
+  color: "#000",
+  scrollTrigger: {
+    scroller: ".main",
+    trigger: ".page3",
+    start: "top 5%",
+    end: "top -5%",
+    scrub: 1,
+    // markers: true,
+  },
+});
+
+t1.to(".video-dets>h3,.video-dets>p", {
+  color: "#000",
+  scrollTrigger: {
+    scroller: ".main",
+    trigger: ".page3",
+    start: "top 5%",
+    end: "top -5%",
+    scrub: 1,
+    markers: true,
+  },
+});
+
 Shery.mouseFollower();
 
 Shery.makeMagnet(".magnet" /* Element to target.*/, {
