@@ -123,3 +123,20 @@ Shery.makeMagnet(".magnet" /* Element to target.*/, {
   ease: "cubic-bezier(0.23, 1, 0.320, 1)",
   duration: 1,
 });
+
+var play = document.querySelector(".page2-video>i");
+var thumnail = document.querySelector(".page2-video > img");
+
+let video = document.querySelector(".page2-video>video");
+
+play.addEventListener("click", () => {
+  play.style.opacity = "0";
+  thumnail.style.zIndex = "-1";
+  video.play();
+});
+
+video.addEventListener("click", () => {
+  play.style.opacity = "1";
+  thumnail.style.zIndex = "9";
+  vid.pause();
+});
