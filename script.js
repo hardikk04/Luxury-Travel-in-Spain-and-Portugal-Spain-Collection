@@ -140,3 +140,70 @@ video.addEventListener("click", () => {
   thumnail.style.zIndex = "9";
   vid.pause();
 });
+
+var videoContainer = document.querySelector(".page3-video-container");
+
+var play1 = document.querySelector(".overlay>i");
+var play2 = document.querySelector(".overlay2>i");
+var play3 = document.querySelector(".overlay3>i");
+let video1 = document.querySelector(".video1");
+let video2 = document.querySelector(".video2");
+let video3 = document.querySelector(".video3");
+let videoPlayer = document.querySelector(".video-player");
+
+var cut = document.querySelector(".close");
+
+play1.addEventListener("click", () => {
+  videoContainer.style.opacity = 0.3;
+  cut.style.opacity = 1;
+
+  video1.style.opacity = 1;
+  video2.style.opacity = 0;
+  video3.style.opacity = 0;
+
+  video1.play();
+  gsap.to(".video-player", {
+    duration: 0.5,
+    zIndex: "100",
+  });
+});
+
+play2.addEventListener("click", () => {
+  videoContainer.style.opacity = 0.3;
+  cut.style.opacity = 1;
+
+  video1.style.opacity = 0;
+  video2.style.opacity = 1;
+  video3.style.opacity = 0;
+
+  video2.play();
+  gsap.to(".video-player", {
+    duration: 0.5,
+    zIndex: "100",
+  });
+});
+
+play3.addEventListener("click", () => {
+  videoContainer.style.opacity = 0.3;
+  cut.style.opacity = 1;
+
+  video1.style.opacity = 0;
+  video2.style.opacity = 0;
+  video3.style.opacity = 1;
+
+  video3.play();
+  gsap.to(".video-player", {
+    duration: 0.5,
+    zIndex: "100",
+  });
+});
+
+cut.addEventListener("click", () => {
+  videoContainer.style.opacity = 1;
+  cut.style.opacity = 0;
+
+  gsap.to(".video-player", {
+    duration: 0.5,
+    zIndex: "-100",
+  });
+});
