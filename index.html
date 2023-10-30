@@ -1,12 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
-</body>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="page1">
+        <nav>
+          <div class="nav-left">
+            <a href="#">Home</a>
+            <a href="#">Collections</a>
+          </div>
+          <img
+            src="https://spaincollection.com/wp-content/themes/spaincollection/img/logo.svg"
+            alt=""
+          />
+          <div class="nav-right">
+            <a href="#">Curators</a>
+            <a href="#">Journal</a>
+          </div>
+        </nav>
+        <div class="page1-main-text" data-scroll data-scroll-speed="3">
+          <h3>
+            Spain Collection is your expert partner for deluxe bespoke travel
+            experiences in
+          </h3>
+          <h1>SPAIN & PORTUGAL</h1>
+        </div>
+        <div class="page1-img-gallery">
+          <div class="left-last"></div>
+          <div class="middle-left">
+            <div class="left-top"></div>
+            <div class="left-bottom"></div>
+          </div>
+          <div class="middle" data-scroll data-scroll-speed="4">
+            <video
+              src="https://spaincollection.com/wp-content/uploads/2020/10/Bg_Home.mp4"
+              muted
+              loop
+              autoplay
+            ></video>
+          </div>
+          <div class="middle-right">
+            <div class="right-top"></div>
+            <div class="right-bottom"></div>
+          </div>
+          <div class="right-last"></div>
+          <div class="gallery-text">
+            <h1>Live your own <span>unique</span> adventure</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+      integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="script.js"></script>
+  </body>
 </html>
