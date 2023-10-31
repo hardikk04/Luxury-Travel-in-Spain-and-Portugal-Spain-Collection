@@ -703,12 +703,70 @@ nav a {
 
 .black {
   position: relative;
-  height: 50vh;
+  height: 25vh;
   width: 100%;
 }
 
-.page6{
+footer {
   position: relative;
-  height: 100vh;
-  width: 100%s;
+  height: 80vh;
+  width: 100%;
+  font-family: interRegular;
+  padding-top: 4vw;
+  text-align: center;
+}
+
+footer > h1 {
+  font-size: 6vw;
+  font-weight: 500;
+  font-family: saolLight;
+  /* width: 80%; */
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+footer > h1 > span {
+  font-family: saolItalic;
+  color: #bf1826;
+}
+
+footer > h3 {
+  font-weight: 500;
+  color: #bf1826;
+  margin-top: 4vw;
+  font-size: 2.2vw;
+}
+
+.links {
+  display: flex;
+  gap: 1vw;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2vw;
+}
+
+.links a {
+  color: #333333;
+  font-size: 1vw;
+}
+
+footer > h2 {
+  font-size: 2.5vw;
+  font-weight: 500;
+  opacity: 0.8;
+  margin-top: 2vw;
+  font-family: interLight;
+}
+
+footer > h6 {
+  color: #bf1826;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin-top: 4vw;
+}
+
+footer > p {
+  font-size: 1.2vw;
+  opacity: 0.8;
+  margin-top: 1vw;
 }
