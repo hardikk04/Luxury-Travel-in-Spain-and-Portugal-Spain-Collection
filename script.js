@@ -43,127 +43,176 @@ locoScroll();
 
 var t1 = gsap.timeline();
 
-t1.to(".middle", {
-  width: "100%",
-  scrollTrigger: {
-    scroller: ".main",
-    trigger: ".page1-img-gallery",
-    start: "top 0%",
-    scrub: 1,
-    // markers: true,
-    pin: true,
-    // pinSpacing: false,
-  },
-});
+var percent = document.querySelector(".loder>h1");
+var overlayLoder = document.querySelector(".overlay-loder");
+var num = 0;
 
-t1.from(".gallery-text", {
-  top: "150%",
-  scrollTrigger: {
-    scroller: ".main",
-    trigger: ".page1-img-gallery",
-    start: "top top",
-    end: "top -100%",
-    scrub: 1,
-    // markers: true,
-  },
-});
+var myInterval = setInterval(function () {
+  if (num <= 80) {
+    num = num + Math.floor(Math.random() * 21);
+    percent.innerHTML = num + "%";
+    overlayLoder.style.height = num + "%";
+  } else {
+    num = 100;
+    percent.innerHTML = num + "%";
+    overlayLoder.style.height = num + "%";
+    clearInterval(myInterval);
+    start();
+  }
+}, 200);
 
-t1.to(".left-last", {
-  left: "-38%",
-  scrollTrigger: {
-    scroller: ".main",
-    trigger: ".page1-img-gallery",
-    start: "top top",
-    end: "top -100%",
-    scrub: 1,
-    // markers: true,
-  },
-});
+function start() {
+  t1.to(".loder", {
+    top: "-100%",
+    duration: 1,
+    delay: 1,
+    ease: "power3.inOut",
+  });
 
-t1.to(".right-last", {
-  right: "-38%",
-  scrollTrigger: {
-    scroller: ".main",
-    trigger: ".page1-img-gallery",
-    start: "top top",
-    end: "top -100%",
-    scrub: 1,
-    // markers: true,
-  },
-});
+  t1.from(
+    ".page1-img-gallery,.page1-main-text > h1",
+    1.2,
+    {
+      opacity: 0,
+      duration: 1,
+      ease: "power3.out",
+    },
+    1.4
+  );
 
-t1.to(".middle-left", {
-  left: "-28%",
-  scrollTrigger: {
-    scroller: ".main",
-    trigger: ".page1-img-gallery",
-    start: "top top",
-    end: "top -100%",
-    scrub: 1,
-    // markers: true,
-  },
-});
+  t1.from(
+    ".page1-main-text > h3, nav ",
+    1,
+    {
+      opacity: 0,
+      duration: 0.3,
+      ease: "power3.in",
+    },
+    1.4
+  );
 
-t1.to(".middle-right", {
-  right: "-28%",
-  scrollTrigger: {
-    scroller: ".main",
-    trigger: ".page1-img-gallery",
-    start: "top top",
-    end: "top -100%",
-    scrub: 1,
-    // markers: true,
-  },
-});
+  t1.to(".middle", {
+    width: "100%",
+    scrollTrigger: {
+      scroller: ".main",
+      trigger: ".page1-img-gallery",
+      start: "top 0%",
+      scrub: 1,
+      // markers: true,
+      pin: true,
+      // pinSpacing: false,
+    },
+  });
 
-t1.to(".page3,.page2", {
-  backgroundColor: "#fff",
-  color: "#000",
-  scrollTrigger: {
-    scroller: ".main",
-    trigger: ".page3",
-    start: "top 5%",
-    end: "top -5%",
-    scrub: 1,
-    // markers: true,
-  },
-});
+  t1.from(".gallery-text", {
+    top: "150%",
+    scrollTrigger: {
+      scroller: ".main",
+      trigger: ".page1-img-gallery",
+      start: "top top",
+      end: "top -100%",
+      scrub: 1,
+      // markers: true,
+    },
+  });
 
-t1.to(".video-dets>h3,.video-dets>p", {
-  color: "#000",
-  scrollTrigger: {
-    scroller: ".main",
-    trigger: ".page3",
-    start: "top 5%",
-    end: "top -5%",
-    scrub: 1,
-    // markers: true,
-  },
-});
+  t1.to(".left-last", {
+    left: "-38%",
+    scrollTrigger: {
+      scroller: ".main",
+      trigger: ".page1-img-gallery",
+      start: "top top",
+      end: "top -100%",
+      scrub: 1,
+      // markers: true,
+    },
+  });
 
-t1.to(".scroller1-text", {
-  transform: "translate(calc(25% + 4px))",
-  scrollTrigger: {
-    scroller: ".main",
-    trigger: ".scroller1-text",
-    start: "top 100%",
-    // end: "top -5%",
-    scrub: 1,
-    // markers: true,
-  },
-});
+  t1.to(".right-last", {
+    right: "-38%",
+    scrollTrigger: {
+      scroller: ".main",
+      trigger: ".page1-img-gallery",
+      start: "top top",
+      end: "top -100%",
+      scrub: 1,
+      // markers: true,
+    },
+  });
 
-t1.to(".scroller2-text", {
-  transform: "translate(calc(-25% - 4px))",
-  scrollTrigger: {
-    scroller: ".main",
-    trigger: ".scroller2-text",
-    start: "top 100%",
-    // end: "top -5%",
-    scrub: 1,
-    // markers: true,
-  },
-});
+  t1.to(".middle-left", {
+    left: "-28%",
+    scrollTrigger: {
+      scroller: ".main",
+      trigger: ".page1-img-gallery",
+      start: "top top",
+      end: "top -100%",
+      scrub: 1,
+      // markers: true,
+    },
+  });
+
+  t1.to(".middle-right", {
+    right: "-28%",
+    scrollTrigger: {
+      scroller: ".main",
+      trigger: ".page1-img-gallery",
+      start: "top top",
+      end: "top -100%",
+      scrub: 1,
+      // markers: true,
+    },
+  });
+
+  t1.to(".page3,.page2", {
+    backgroundColor: "#fff",
+    color: "#000",
+    scrollTrigger: {
+      scroller: ".main",
+      trigger: ".page3",
+      start: "top 5%",
+      end: "top -5%",
+      scrub: 1,
+      // markers: true,
+    },
+  });
+
+  t1.to(".video-dets>h3,.video-dets>p", {
+    color: "#000",
+    scrollTrigger: {
+      scroller: ".main",
+      trigger: ".page3",
+      start: "top 5%",
+      end: "top -5%",
+      scrub: 1,
+      // markers: true,
+    },
+  });
+
+  t1.to(".scroller1-text", {
+    transform: "translate(calc(25% + 4px))",
+    scrollTrigger: {
+      scroller: ".main",
+      trigger: ".scroller1-text",
+      start: "top 100%",
+      // end: "top -5%",
+      scrub: 1,
+      // markers: true,
+    },
+  });
+
+  t1.to(".scroller2-text", {
+    transform: "translate(calc(-25% - 4px))",
+    scrollTrigger: {
+      scroller: ".main",
+      trigger: ".scroller2-text",
+      start: "top 100%",
+      // end: "top -5%",
+      scrub: 1,
+      // markers: true,
+    },
+  });
+}
 
 Shery.mouseFollower();
 
