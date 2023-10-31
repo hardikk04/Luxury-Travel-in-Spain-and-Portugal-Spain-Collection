@@ -444,16 +444,18 @@ nav a {
   min-height: 100vh;
   width: 100%;
   background-color: #fff;
+  padding-top: 30vw;
 }
 
 .page4 > h1 {
-  font-size: 13vw;
+  font-size: 10vw;
   text-align: center;
   font-family: saolLight;
   line-height: 0.9;
   text-transform: uppercase;
   font-weight: 500;
   left: 50%;
+  top: 0;
   transform: translateX(-50%);
   /* margin-top: 4vw; */
   position: absolute;
@@ -468,18 +470,17 @@ nav a {
 
 .page4-box {
   position: relative;
-  height: 200vh;
+  height: 100vh;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
   align-items: end;
   font-family: interRegular;
-  top: 50%;
-  transform: translateY(-10%);
+  /* margin-top: 20vw; */
 }
 
 .page4-box-elem {
-  height: 50%;
+  height: 100%;
   width: 22%;
   display: flex;
   flex-direction: column;
@@ -518,4 +519,78 @@ nav a {
   width: 80%;
   margin-top: 0.5vw;
   font-size: 1.1vw;
+}
+
+.page5 {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: salmon;
+}
+
+.scroller1 {
+  position: relative;
+  padding: 4vw;
+  font-family: saolLight;
+  padding-bottom: 0;
+  overflow-x: hidden;
+}
+
+.scroller1-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.scroller1-text > h1 {
+  font-size: 8vw;
+  font-weight: 500;
+  animation: scroller 40s linear infinite both;
+}
+
+@keyframes scroller {
+  from {
+    transform: translate(0);
+  }
+
+  to {
+    transform: translate(calc(100% + 4px));
+  }
+}
+
+.scroller2 {
+  position: relative;
+  font-family: saolLight;
+  overflow-x: hidden;
+}
+
+.scroller2-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.scroller2-text > h1 {
+  font-size: 8vw;
+  font-weight: 500;
+  animation: scroller1 50s linear infinite both;
+}
+
+@keyframes scroller1 {
+  from {
+    transform: translate(0);
+  }
+
+  to {
+    transform: translate(calc(-100% - 4px));
+  }
+}
+
+.page5 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: salmon;
 }

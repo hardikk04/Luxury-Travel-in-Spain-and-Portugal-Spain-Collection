@@ -141,6 +141,30 @@ t1.to(".video-dets>h3,.video-dets>p", {
   },
 });
 
+t1.to(".scroller1-text", {
+  transform: "translate(calc(25% + 4px))",
+  scrollTrigger: {
+    scroller: ".main",
+    trigger: ".scroller1-text",
+    start: "top 100%",
+    // end: "top -5%",
+    scrub: 1,
+    // markers: true,
+  },
+});
+
+t1.to(".scroller2-text", {
+  transform: "translate(calc(-25% - 4px))",
+  scrollTrigger: {
+    scroller: ".main",
+    trigger: ".scroller2-text",
+    start: "top 100%",
+    // end: "top -5%",
+    scrub: 1,
+    // markers: true,
+  },
+});
+
 Shery.mouseFollower();
 
 Shery.makeMagnet(".magnet" /* Element to target.*/, {
