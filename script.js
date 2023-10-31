@@ -177,7 +177,7 @@ function start() {
     },
   });
 
-  t1.to(".video-dets>h3,.video-dets>p", {
+  t1.to(".video-dets>h3,.video-dets>p,.close", {
     color: "#000",
     scrollTrigger: {
       scroller: ".main",
